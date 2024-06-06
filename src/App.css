@@ -1,38 +1,107 @@
+* {
+  margin: 0px;
+}
+
+body {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 120vh;
+  color: #fff;
+  font-family: "Bree" serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  padding: 40px 0px;
+  font-size: 38px;
+}
+input {
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding-left: 10px;
+  color: #000;
+  font-size: 15px;
+  width: 500px;
+  height: 45px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  height: 45px;
+  width: 50px;
+  background-color: gray;
+  color: #000;
+  border-radius: 50%;
+  border-width: 0px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.weather-container {
+  width: 600px;
+  padding: 20px;
+  margin-top:30px ;
+}
+
+.hourly-weather, 
+.weather-days{
+  margin: 20px 0px;
+}
+
+.cel{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.hourly-weather ul {
+  list-style-type: none;
+  display: flex;
+  overflow-x: auto;
+}
+span{
+  text-align: left;
+  color: #686666;
+  margin-bottom: 15px;
+}
+.weather-days{
+  border: 1px solid #686666;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.weather-days ul {
+  list-style-type: none;
+}
+
+.weather-days ul li div{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather-days ul li{
+  border-bottom: 1px solid #686666;
+}
+
+.weather{
+  text-align: center;
+}
+
+.min-max{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 80px;
+}
+
+hr{
+  fill: #686666;
+  
 }
