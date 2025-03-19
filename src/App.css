@@ -11,15 +11,8 @@ body {
   height: 120vh;
   color: #fff;
   font-family: "Bree" serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-h1 {
-  padding: 40px 0px;
-  font-size: 38px;
-}
 input {
   outline: none;
   border: 1px solid gray;
@@ -32,22 +25,7 @@ input {
   margin-right: 10px;
 }
 
-button {
-  height: 45px;
-  width: 50px;
-  background-color: gray;
-  color: #000;
-  border-radius: 50%;
-  border-width: 0px;
-  font-size: 17px;
-  cursor: pointer;
-}
 
-.weather-container {
-  width: 600px;
-  padding: 20px;
-  margin-top:30px ;
-}
 
 .hourly-weather, 
 .weather-days{
@@ -84,10 +62,6 @@ span{
   width: 100%;
   justify-content: space-around;
   align-items: center;
-}
-
-.weather-days ul li{
-  border-bottom: 1px solid #686666;
 }
 
 .weather{
