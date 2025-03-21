@@ -1,15 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0px;
 }
 
 body {
   box-sizing: border-box;
+  background-color: #282c34;
 }
 
 .App {
-  background-color: #282c34;
-  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   color: #fff;
+  padding: 20px;
   font-family: "Bree" serif;
 }
 
@@ -17,22 +25,72 @@ input {
   outline: none;
   border: 1px solid gray;
   border-radius: 25px;
-  padding-left: 10px;
+  padding: 0px 12px;
   color: #000;
   font-size: 15px;
-  width: 500px;
+  width: 100%;
   height: 45px;
   margin-right: 10px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
+form div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0px;
+}
 
+form div button {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  background-color: #374151;
+  color: #fff;
+  font-weight: 600;
+  border: 0px;
+}
 
-.hourly-weather, 
-.weather-days{
+.weather-data {
+  height: 100%;
+  margin: 40px 0px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    width: 80%;
+  }
+  form div {
+    width: 60%;
+  }
+  .weather-data {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .weather-data {
+    width: 60%;
+  }
+}
+
+.hourly-weather,
+.weather-days {
   margin: 20px 0px;
 }
 
-.cel{
+.hourly-weather {
+  width: 100%;
+}
+
+.cel {
   font-size: 50px;
   font-weight: bold;
 }
@@ -41,41 +99,67 @@ input {
   list-style-type: none;
   display: flex;
   overflow-x: auto;
+  border: 2px solid #6b7280;
+  border-radius: 16px;
+  gap: 20px;
+  padding: 16px;
 }
-span{
+
+.hourly-weather ul li div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.hourly-weather ul li {
+  min-width: 80px;
+  min-height: 112px;
+}
+
+span {
   text-align: left;
   color: #686666;
   margin-bottom: 15px;
 }
-.weather-days{
-  border: 1px solid #686666;
-  border-radius: 10px;
-  padding: 15px;
+.weather-days {
+  border: 2px solid #6b7280;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .weather-days ul {
   list-style-type: none;
 }
 
-.weather-days ul li div{
+.weather-days ul li div {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  height: 100%;
+  justify-content: space-between;
   align-items: center;
 }
+h4 {
+  margin: 10px 0px;
+}
 
-.weather{
+.weather {
   text-align: center;
 }
 
-.min-max{
+.bottom-border {
+  border: 0px;
+  border-bottom: 1px solid #6b7280;
+}
+
+.min-max {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 80px;
+  margin-left: 50px;
 }
 
-hr{
+hr {
   fill: #686666;
-  
 }
